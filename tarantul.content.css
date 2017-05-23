@@ -8,71 +8,62 @@ article > div.content strong {
 	font-weight: normal;
 	font-family: 'RobotoBold', Arial, Tahoma, Verdana, sans-serif;
 }
-
 /*highlight*/
 article > div.content > div.highlight {
 	min-height: 0;
 	background: url('img/tick.png') no-repeat #fcf8f2;
 	background-size: 120px;
+}
+
+article > div.content > div.highlight > p:first-of-type {
 	font-family: 'RobotoBold', Arial, Tahoma, Verdana, sans-serif;
-	font-weight: 700;
 }
 /*highlight end*/
-
 /*list start*/
 article > div.content > ol {
-  list-style-type: none;
-  counter-reset: list-counter;
-  font-size: 18px;
-  line-height: 28px;
+	list-style-type: none;
+	counter-reset: list-counter;
+	font-family: 'RobotoLight', Arial, Tahoma, Verdana, sans-serif;
+	font-size: 22px;
+	line-height: 28px;
 }
 
 article > div.content > ol > li {
-  padding-left: 25px;
-  position: relative;
+	padding-left: 25px;
+	position: relative;
+	margin-bottom: 20px;
 }
 
 article > div.content > ol > li:before {
-  box-sizing: border-box;
-  position: absolute;
-  left: -45px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-  counter-increment: list-counter;
-  content: counter(list-counter);
-  font-size: 34px;
-  font-weight: 700;
-  color: #ffffff;
-  background: #ffaa00;
-}
-
-article > div.content > ol > li > p:first-child {
-  font-family: RobotoBold, Arial, Tahoma, Verdana, sans-serif;
-  font-weight: 700;
-  margin-bottom: 0;
-}
-
-article > div.content > ol > li > p:nth-child(n+2) {
-  margin-top: 0;
+	box-sizing: border-box;
+	position: absolute;
+	left: -40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	counter-increment: list-counter;
+	content: counter(list-counter);
+	font-family: 'RobotoBold', Arial, Tahoma, Verdana, sans-serif;;
+	font-size: 34px;
+	color: #ffffff;
+	background: #ffaa00;
 }
 /*list end*/
-
 /*attention*/
 article > div.content .attention {
 	position: relative;
 	padding: 8px 10px 10px 40px;
+	margin: 40px 90px 20px 30px;
 	border: 1px solid #ffaa00;
 	font-family: 'RobotoRegular', Arial, Tahoma, Verdana, sans-serif;
-	font-weight: 400;
 }
 
 article > div.content .attention::before {
 	position: absolute;
-	top: 9%;
+	top: 20%;
 	left: -24px;
 	height: 60px;
 	width: 45px;
@@ -80,7 +71,6 @@ article > div.content .attention::before {
 	content: "";
 }
 /*attention end*/
-
 /*epilogue start*/
 article > div.content > div.epilogue-no-image {
 	color: #4b4b4b;
@@ -202,4 +192,8 @@ article > div.content > div.epilogue-no-image {
 	}
 	/*epilogue end*/
 }
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+ 	article > div.content > div.highlight {
+		background-image: url('img/tick_hires.png');
+	}
+}
